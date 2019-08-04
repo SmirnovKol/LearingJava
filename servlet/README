@@ -1,4 +1,4 @@
-
+The core methods of this program is as follows:
   
   // MySQL 8.0 以上版本 - JDBC 驱动名及数据库 URL
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
