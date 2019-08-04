@@ -1,4 +1,4 @@
-# jar package: c3p0, commons-dbutils, mchange
+# jar package: c3p0, commons-dbutils, mchange.  Use c3p0-config.xml to configure the information about the database
 # function: seach a bookstore in MySQL database, the table bookstore has 3 columns: name, price, category
 # the core methods is as follows:
 	
