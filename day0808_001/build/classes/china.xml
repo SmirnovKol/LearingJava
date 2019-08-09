@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<china>
+	<province name="湖北">
+		<city>武汉</city>
+		<city>荆州</city>
+		<city>襄阳</city>
+	</province>
+	<province name="四川">
+		<city>成都</city>
+		<city>自贡市</city>
+		<city>攀枝花市</city>
+		<city>泸州市</city>
+	</province>
+</china>
