@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName">
+
+	<bean id="user" class="cn.sxt.vo.User">
+		<property name="id" value="1110329"/>
+		<property name="name" value="王五"/>
+		<property name="age" value="26"/>
+		<property name="books">
+			<array>
+				<value>学习python</value>
+				<value>学习java</value>
+				<value>学习C/C++</value>
+			</array>
+		</property>
+		<property name="hobbies">
+			<list>
+				<value>跑步</value>
+				<value>引体向上</value>
+				<value>篮球</value>
+			</list>
+		</property>
+		<!-- Map注入 -->
+		<property name="cards">
+			<map>
+				<entry key="建设银行" value="235 4353453"/>
+				<entry key="农业银行" value="111112222"/>
+			</map>
+		</property>
+		<property name="games">
+			<set>
+				<value>王者荣耀</value>
+				<value>dota</value>
+			</set>
+		</property>
+		<property name="wife"><null/></property>
+		<property name="info">
+			<props>
+				<prop key="户口">城镇</prop>
+				<prop key="高中">第三中学</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- more bean definitions go here -->
+	<bean id="user2" class="cn.sxt.vo.User2">
+		<constructor-arg name="id" value="1110329"/>
+		<constructor-arg name="name" value="王五"/>
+		<constructor-arg name="age" value="26"/>
+	</bean>
+	
+	<bean id="user3" class="cn.sxt.vo.User3" p:id="1110329"
+		p:name="张三" p:age="26"/>
+		
+	<bean id="user4" class="cn.sxt.vo.User3" c:id="11109"
+		c:name="王五0821" c:age="27"/>
+	
+	<!-- 或者使用default-autowire="byName" -->
+	<bean id="userDao" class="cn.sxt.dao.impl.UserDaoMySQLImpl"/>
+	<bean id="service" class="cn.sxt.service.impl.UserServiceImpl" autowire="byName"/>
+</beans>
